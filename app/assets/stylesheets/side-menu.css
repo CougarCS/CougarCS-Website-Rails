@@ -56,6 +56,8 @@ The content `<div>` is where all your content goes.
 	text-align: center;
 	padding: 2.5em 2em 0;
 	border-bottom: 1px solid #eee;
+	max-width: 768px;
+	margin: 0 auto;
 }
 .header h1 {
 	margin: 0.2em 0;
@@ -117,7 +119,7 @@ Add that light border to separate items into groups.
 */
 #menu .pure-menu ul,
 #menu .pure-menu .menu-item-divided {
-	border-top: 1px solid #333;
+	border-top: 1px solid #960C22;
 }
 /*
 Change color of the anchor links on hover/focus.
