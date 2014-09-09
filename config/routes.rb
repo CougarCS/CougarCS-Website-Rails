@@ -1,5 +1,8 @@
 CougarCSWebsite::Application.routes.draw do
   get "static_pages/home"
+  get "static_pages/about"
+  
+  match '/about', to: 'static_pages#about', via: [:get]
   
   root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
