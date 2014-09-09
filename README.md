@@ -1,2 +1,2 @@
-CougarCS-Website
-================
+Le CougarCS Website
+====================
