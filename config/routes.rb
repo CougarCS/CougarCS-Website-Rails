@@ -2,9 +2,11 @@ CougarCSWebsite::Application.routes.draw do
   get "static_pages/home"
   get "static_pages/about"
   get "static_pages/contact"
+  get "static_pages/officers"
   
   match '/about', to: 'static_pages#about', via: [:get]
   match '/contact', to: 'static_pages#contact', via: [:get]
+  match '/officers', to: 'static_pages#officers', via: [:get]
   
   root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
