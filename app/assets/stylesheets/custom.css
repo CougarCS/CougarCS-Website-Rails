@@ -13,11 +13,34 @@ hr.style-one {
 	color: #333;
 }
 
+.officer-title {
+	text-align: center;
+	color: #333;
+	margin: 0;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+}
+
+.officer-name {
+	text-align: center;
+	font-weight: lighter;
+	margin: 0;
+	padding: 0;
+	font-size: 120%;
+}
+
+.padding-10 {
+	padding: 10px;
+}
+
+.bottom-padding-25 {
+	padding-bottom: 25px;
+}
+
 
 
 
 /* Home page splash parallax effect */
-
 .splash-container {
     background: #00B388;
     z-index: 1;
