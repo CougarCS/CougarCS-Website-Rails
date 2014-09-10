@@ -54,7 +54,7 @@ The content `<div>` is where all your content goes.
 	color: #333;
 	text-align: center;
 	padding: 2.5em 2em 0;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #C8102E;
 	max-width: 768px;
 	margin: 0 auto;
 }
@@ -62,6 +62,7 @@ The content `<div>` is where all your content goes.
 	margin: 0.2em 0;
 	font-size: 3em;
 	font-weight: 300;
+	color: #C8102E;
 }
 .header h2 {
 	font-weight: 300;
@@ -138,6 +139,11 @@ This styles the selected menu item `<li>`.
 /*
 This styles a link within a selected menu item `<li>`.
 */
+
+#menu .pure-menu-heading {
+	background: #960C22;
+}
+
 #menu .pure-menu-selected a {
 	color: #C8102E;
 	background: #FFFFFF;
@@ -147,8 +153,9 @@ This styles a link within a selected menu item `<li>`.
 This styles the menu heading.
 */
 #menu .pure-menu-heading {
-	font-size: 175%;
-	letter-spacing: 0.1em;
+	font-size: 200%;
+	font-weight: bold;
+/*	letter-spacing: 0.1em;*/
 	color: #fff;
 	margin-top: 0;
 	text-transform: none;
