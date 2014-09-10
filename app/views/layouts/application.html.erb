@@ -21,10 +21,14 @@
 
 				<ul>
 					<!-- class="pure-menu-selected" -->
-					<li><a href="/">Home</a></li>
-					<li><a href="/about">About</a></li>
-					<li><a href="/contact">Contact us</a></li>
-					<li><a href="/officers">List of officers</a></li>
+					<!-- <li><a href="/">Home</a></li> -->
+					<%= nav_link_to 'Home', "/", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+					<!-- <li><a href="/about">About</a></li> -->
+					<%= nav_link_to 'About', "/about", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+					<!-- <li><a href="/contact">Contact us</a></li> -->
+					<%= nav_link_to 'Contact us', "/contact", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+					<!-- <li><a href="/officers">List of officers</a></li> -->
+					<%= nav_link_to 'Officers', "/officers", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
 					<li><a href="#">Hackathons</a></li>
 					<li><a href="#">Social events</a></li>
 					<li><a href="#">Calendar</a></li>
