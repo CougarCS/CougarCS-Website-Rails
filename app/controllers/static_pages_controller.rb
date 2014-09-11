@@ -10,4 +10,8 @@ class StaticPagesController < ApplicationController
   
   def officers
   end
+  
+  def business_contact_form
+  end
+  
 end

@@ -2,6 +2,12 @@ body {
 	color: #777;
 }
 
+/* Because putting this in custom.css isn't working... */
+.button-uh {
+	background: #C8102E;
+	color: #FFFFFF;
+}
+
 .pure-img-responsive {
 	max-width: 100%;
 	height: auto;

@@ -37,6 +37,12 @@ hr.style-one {
 	padding-bottom: 25px;
 }
 
+/* Doesn't actually work. Check in side-menu.css instead */
+.button-uh {
+	background: #C8102E;
+	color: #FFFFFF;
+}
+
 
 
 
