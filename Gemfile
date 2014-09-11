@@ -3,11 +3,22 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
+# # Use postgresql as the database for Active Record
+# gem 'pg'
+#
+# # Heroku said so...
+# gem 'rails_12factor'
 
-# Heroku said so...
-gem 'rails_12factor'
+#This gem will be used for the database on heroku
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+#During development, this gem for the database will be used
+group :development do
+  gem 'sqlite3'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
