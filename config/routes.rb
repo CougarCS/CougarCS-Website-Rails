@@ -1,4 +1,6 @@
 CougarCSWebsite::Application.routes.draw do
+  resources :authors
+
   resources :posts
 
   get "static_pages/home"
