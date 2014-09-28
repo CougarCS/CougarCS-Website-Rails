@@ -9,16 +9,19 @@ gem 'rails', '4.0.2'
 # # Heroku said so...
 # gem 'rails_12factor'
 
-#This gem will be used for the database on heroku
+# This gem will be used for the database on heroku
 group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
 
-#During development, this gem for the database will be used
+# During development, this gem for the database will be used
 group :development do
   gem 'sqlite3'
 end
+
+# To handle images for author
+gem "paperclip", "~> 4.2"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
