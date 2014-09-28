@@ -1,4 +1,6 @@
 CougarCSWebsite::Application.routes.draw do
+  resources :posts
+
   get "static_pages/home"
   get "static_pages/about"
   get "static_pages/contact"
