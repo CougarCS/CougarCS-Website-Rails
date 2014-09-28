@@ -23,6 +23,9 @@ end
 # To handle images for author
 gem "paperclip", "~> 4.2"
 
+# TO authenticate authors
+gem 'devise'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
