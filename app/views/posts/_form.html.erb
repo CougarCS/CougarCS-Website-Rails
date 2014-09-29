@@ -1,33 +1,35 @@
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<%= form_for(@post, :html => {:class => 'pure-form pure-form-aligned'}) do |f| %>
+	<fieldset>
+		<% if @post.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+			<ul>
+				<% @post.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :author_id %><br>
-    <%= f.text_field :author_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+		<div class="pure-control-group">
+			<%= f.label :title %>
+			<%= f.text_field :title, :class => 'pure-input-1-2' %>
+		</div>
+		<div class="pure-control-group">
+			<%= f.label :body %>
+			<%= f.text_area :body, :class => 'pure-input-1-2', :rows =>'6' %>
+		</div>
+		<!--<div class="field">
+			<#= f.label :date %><br>
+			<#= f.date_select :date %>
+			</div>
+			<div class="field">
+			<#= f.label :author_id %><br>
+			<#= f.text_field :author_id %>
+			</div>-->
+			<div class="pure-controls">
+				<%= f.submit 'Add post', :class => 'pure-button button-uh' %>
+			</div>
+	</fieldset>
 <% end %>
