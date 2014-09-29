@@ -41,11 +41,11 @@
 		</div>
 
 		<div id="main">
-			<% if !notice %>
-				<p class="notice"><i class="fa fa-cog"></i><%= notice %></p>
+			<% if notice %>
+				<p class="notice"><i class="fa fa-info-circle"></i><%= notice %></p>
 			<% end %>
 			<% if alert %>
-				<p class="alert"><%= alert %></p>
+				<p class="alert"><i class="fa fa-exclamation-circle"></i><%= alert %></p>
 			<% end %>
 			<%= yield %>
 		</div>
