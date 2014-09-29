@@ -1,29 +1,43 @@
-<%= form_for(@author) do |f| %>
-  <% if @author.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@author.errors.count, "error") %> prohibited this author from being saved:</h2>
+<%= form_for(@author, :html => {:multipart => true, :class => 'pure-form pure-form-aligned'}) do |f| %>
+	<fieldset>
+		<% if @author.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@author.errors.count, "error") %> prohibited this author from being saved:</h2>
 
-      <ul>
-      <% @author.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+			<ul>
+				<% @author.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
 
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :posts_id %><br>
-    <%= f.text_field :posts_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+		<div class="pure-control-group">
+			<%= f.label :first_name %>
+			<%= f.text_field :first_name %>
+		</div>
+		<div class="pure-control-group">
+			<%= f.label :last_name %>
+			<%= f.text_field :last_name %>
+		</div>
+		<div class="pure-control-group">
+			<%= f.label :email %>
+			<%= f.email_field :email %>
+		</div>
+		<div class="pure-control-group">
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</div>
+		<div class="pure-control-group">
+			<%= f.label :avatar %>
+			<%= f.file_field :avatar %>
+		</div>
+		<!-- <div class="pure-control-group">
+			<#= f.label :posts_id %>
+			<#= f.text_field :posts_id %>
+		</div> -->
+		<div class="pure-controls">
+			<%= f.submit :class => 'pure-button button-uh' %>
+		</div>
+	</fieldset>
+	<% end %>

@@ -5,7 +5,9 @@
     <tr>
       <th>First name</th>
       <th>Last name</th>
-      <th>Posts</th>
+	  <th>Email</th>
+	  <th>Picture</th>
+      <!-- <th>Posts</th> -->
       <th></th>
       <th></th>
       <th></th>
@@ -17,7 +19,9 @@
       <tr>
         <td><%= author.first_name %></td>
         <td><%= author.last_name %></td>
-        <td><%= author.posts %></td>
+		<td><%= author.email %></td>
+		<td><%= image_tag author.avatar.url, :style => "height: 50px; width: 50px" %></td>
+        <!-- <td><#= author.posts %></td> -->
         <td><%= link_to 'Show', author %></td>
         <td><%= link_to 'Edit', edit_author_path(author) %></td>
         <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
