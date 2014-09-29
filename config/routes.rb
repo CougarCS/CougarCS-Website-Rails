@@ -2,7 +2,7 @@ CougarCSWebsite::Application.routes.draw do
   devise_for :authors
   resources :authors
 
-  resources :posts
+  resources :posts, :except => [:show]
 
   get "static_pages/home"
   get "static_pages/about"
