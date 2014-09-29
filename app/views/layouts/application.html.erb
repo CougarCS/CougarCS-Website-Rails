@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>CougarCS</title>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	<%= csrf_meta_tags %>
@@ -41,8 +42,7 @@
 
 		<div id="main">
 			<% if !notice %>
-				<i class="fa fa-cog"></i>
-				<p class="notice"><%= notice %></p>
+				<p class="notice"><i class="fa fa-cog"></i><%= notice %></p>
 			<% end %>
 			<% if alert %>
 				<p class="alert"><%= alert %></p>
