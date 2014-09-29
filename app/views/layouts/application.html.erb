@@ -40,7 +40,8 @@
 		</div>
 
 		<div id="main">
-			<% if notice %>
+			<% if !notice %>
+				<i class="fa fa-cog"></i>
 				<p class="notice"><%= notice %></p>
 			<% end %>
 			<% if alert %>

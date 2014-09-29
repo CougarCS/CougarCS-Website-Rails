@@ -26,7 +26,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
-    bcrypt-ruby (3.0.1)
+    bcrypt (3.1.7)
     builder (3.1.4)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -39,16 +39,16 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
-    commonjs (0.2.7)
-    devise (3.0.3)
-      bcrypt-ruby (~> 3.0)
+    devise (3.3.0)
+      bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.1)
-    font-awesome-less (4.2.0)
-      less (~> 2.4.0)
+    font-awesome-sass (4.2.0)
+      sass (~> 3.2)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (1.5.3)
@@ -58,8 +58,6 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    less (2.4.0)
-      commonjs (~> 0.2.7)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -68,7 +66,7 @@ GEM
     multi_json (1.10.1)
     nav_lynx (1.1.1)
       rails (>= 3.1.0)
-    orm_adapter (0.4.0)
+    orm_adapter (0.5.0)
     paperclip (4.2.0)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -98,7 +96,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
-    rdoc (4.1.1)
+    rdoc (4.1.2)
       json (~> 1.4)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -140,7 +138,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
-  font-awesome-less
+  font-awesome-sass
   jbuilder (~> 1.2)
   jquery-rails
   nav_lynx
