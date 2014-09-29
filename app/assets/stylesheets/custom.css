@@ -67,6 +67,29 @@ hr.style-one {
 	width: 100%;
 }
 
+/* notice and alert box styling when something is created or deleted */
+.notice {
+	position: relative;
+	z-index: 2;
+	color: #555;
+    border-radius: 10px;
+    padding: 10px 10px 10px 36px;
+    margin: 10px;
+	background: #E3F7FC;
+	border:1px solid #8ed9f6;
+}
+
+.alert {
+	position: relative;
+	z-index: 2;
+	color: #555;
+    border-radius: 10px;
+    padding: 10px 10px 10px 36px;
+    margin: 10px;
+	background: #ffecec;
+	border: 1px solid #f5aca6;
+}
+
 
 
 

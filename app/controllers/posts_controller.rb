@@ -23,11 +23,11 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @post }
+        format.html { redirect_to root_path, notice: 'Post was successfully created.' }
+        format.json { render action: 'show', status: :created, location: root_path }
       else
         format.html { render action: 'new' }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.json { render json: root_path.errors, status: :unprocessable_entity }
       end
     end
   end
