@@ -1,19 +1,32 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @author.first_name %>
-</p>
+<div class="header">
+	<h1><%= @author.first_name %> <%= @author.last_name %></h1>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @author.last_name %>
-</p>
+<div class="content">
+	<h2 class="content-subhead"></h2>
+	<p id="notice"><%= notice %></p>
+	
+	<% for post in @author.posts %>
+		<section class="post">
+			<header class="post-header">
+				<div class="calendar-date">
+					<div class="calendar-date-month"><%= Date::ABBR_MONTHNAMES[post.date.month] %></div>
+					<div class="calendar-date-day"><%= post.date.mday %></div>
+				</div>
+				<img class="post-avatar" src="https://media.licdn.com/mpr/mpr/shrink_120_120/p/7/005/01d/0ae/2b81c30.jpg">
+				<h2 class="post-title"><%= post.title %></h2>
+				<p class="post-meta">By <%= @author.first_name %> <%= @author.last_name %></p>
+			</header>
+			<div class="post-description">
+				<p>
+					<%= post.body %>
+				</p>
+			</div>
+		</section>
+	<% end %>
 
-<p>
-  <strong>Posts:</strong>
-  <%= @author.posts %>
-</p>
+	<%= link_to 'Edit', edit_author_path(@author) %> |
+	<%= link_to 'Back', authors_path %>
 
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+</div>
