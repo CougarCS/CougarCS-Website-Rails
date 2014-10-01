@@ -39,14 +39,27 @@
 				</ul>
 			</div>
 		</div>
-
+		
 		<div id="main">
+			
+			<% if author_signed_in? %>
+				<div class="extra-header">
+					<div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+						<ul>
+							<%= nav_link_to 'Sign out', destroy_author_session_path, {:method => :delete}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+							<%= nav_link_to 'All authors', "/authors", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+						</ul>
+					</div>
+				</div>
+			<% end %>
+			
 			<% if notice %>
-				<p class="notice"><i class="fa fa-info-circle"></i><%= notice %></p>
+				<p class="notice"><i class="fa fa-info-circle"> </i> <%= notice %></p>
 			<% end %>
 			<% if alert %>
-				<p class="alert"><i class="fa fa-exclamation-circle"></i><%= alert %></p>
+				<p class="alert"><i class="fa fa-exclamation-circle"> </i> <%= alert %></p>
 			<% end %>
+			
 			<%= yield %>
 		</div>
 
