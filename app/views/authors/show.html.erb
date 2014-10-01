@@ -14,7 +14,7 @@
 					<div class="calendar-date-month"><%= Date::ABBR_MONTHNAMES[post.date.month] %></div>
 					<div class="calendar-date-day"><%= post.date.mday %></div>
 				</div>
-				<img class="post-avatar" src="https://media.licdn.com/mpr/mpr/shrink_120_120/p/7/005/01d/0ae/2b81c30.jpg">
+				<%= image_tag @author.avatar.url, :class => "post-avatar" %>
 				<h2 class="post-title"><%= post.title %></h2>
 				<p class="post-meta">By <%= @author.first_name %> <%= @author.last_name %></p>
 			</header>
@@ -26,7 +26,6 @@
 		</section>
 	<% end %>
 
-	<%= link_to 'Edit', edit_author_path(@author) %> |
-	<%= link_to 'Back', authors_path %>
+	<%= link_to 'Edit profile', edit_author_path(@author) %>
 
 </div>
