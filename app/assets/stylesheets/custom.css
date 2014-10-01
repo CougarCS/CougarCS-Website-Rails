@@ -214,3 +214,9 @@ hr.style-one {
 }
 
 
+
+
+/* Formatting the default error block created by Rails */
+.field_with_errors {
+  display: inline-block !important;
+}
