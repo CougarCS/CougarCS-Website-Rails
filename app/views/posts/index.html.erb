@@ -19,7 +19,7 @@
         <td><%= post.title %></td>
         <td><%= post.body %></td>
         <td><%= post.date %></td>
-        <td><%= post.author %></td>
+        <td><%= Author.find(post.author_id).first_name %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

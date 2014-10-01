@@ -20,6 +20,12 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    puts "\n==============\n"
+    puts post_params
+    puts post_params.class.name
+    puts current_author.id
+    puts "\n==============\n"
+    
     @post = Post.new(post_params)
 
     respond_to do |format|

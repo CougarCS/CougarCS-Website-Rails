@@ -20,6 +20,13 @@
 			<%= f.label :body %>
 			<%= f.text_area :body, :class => 'pure-input-1-2', :rows =>'6' %>
 		</div>
+		<%= f.hidden_field :author_id, :as => :hidden, :value => current_author.id %>
+		<%= f.hidden_field :date, :as => :hidden, :value => Date.today %>
+		
+		<!-- <%= hidden_field_tag :author_id, current_author.id %> -->
+		<!-- <%= hidden_field_tag :date, Date.today %> -->
+		<!-- <#= f.hidden_field(:author, :id) %> -->
+		<!-- <input type="hidden" id="author_id" name="author_id" value="#{current_author.id}"> -->
 		<!--<div class="field">
 			<#= f.label :date %><br>
 			<#= f.date_select :date %>
