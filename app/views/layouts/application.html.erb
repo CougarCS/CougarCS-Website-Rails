@@ -46,9 +46,7 @@
 				<div class="extra-header">
 					<div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
 						<ul>
-							<%= nav_link_to 'All authors', "/authors", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
 							<%= nav_link_to 'New post', new_post_path, {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
-							<%= nav_link_to 'All posts', posts_path, {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
 							<%= nav_link_to 'Edit my profile', edit_author_path(current_author), {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
 							<%= nav_link_to 'Sign out', destroy_author_session_path, {:method => :delete}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
 						</ul>
