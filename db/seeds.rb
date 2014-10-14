@@ -11,8 +11,8 @@ Post.create(title: '1st CougarCS Meeting For Fall 2014', body: '<p>
 				</p>
 				<p>
 					So <a href="https://www.facebook.com/events/1473345866261115/1473686369560398/">RSVP</a> to the meeting and come enjoy some FREE food and socialize with your fellow comrades!
-				</p>', date: '2014-09-09', author_id: 3)
+				</p>', date: '2014-09-09', author_id: 1)
 
-Post.create(title: 'Houston Techfest', body: 'Houston Techfest is this Saturday September 13 at Reliant Center. Free to attend, over 1,500 attendees, with multiple tracks ranging from .NET, JavaScript, Mobile Development, Cloud, Agile Methods. Great opportunities to network and learn from professionals in the Houston area! Come see what the Houston Developer scene is all about!', date: '2014-09-08', author_id: 3)
+Post.create(title: 'Houston Techfest', body: 'Houston Techfest is this Saturday September 13 at Reliant Center. Free to attend, over 1,500 attendees, with multiple tracks ranging from .NET, JavaScript, Mobile Development, Cloud, Agile Methods. Great opportunities to network and learn from professionals in the Houston area! Come see what the Houston Developer scene is all about!', date: '2014-09-08', author_id: 1)
 
-Post.create(title: 'UH vs Grambling State Tailgating', body: 'Hello everyone! Our second tailgate will be this Saturday (9/6) before the football game against Grambling State. CougarCS and the CS Alumni will have our own Booth there. So come by and enjoy some FREE food and socializing before the game!!!', date: '2014-09-05', author_id: 3)
+Post.create(title: 'UH vs Grambling State Tailgating', body: 'Hello everyone! Our second tailgate will be this Saturday (9/6) before the football game against Grambling State. CougarCS and the CS Alumni will have our own Booth there. So come by and enjoy some FREE food and socializing before the game!!!', date: '2014-09-05', author_id: 1)
