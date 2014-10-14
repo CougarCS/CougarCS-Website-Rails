@@ -1,7 +1,7 @@
 CougarCSWebsite::Application.routes.draw do
   devise_for :authors
   resources :authors
-
+  
   resources :posts
 
   get "static_pages/home"
@@ -14,6 +14,8 @@ CougarCSWebsite::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: [:get]
   match '/officers', to: 'static_pages#officers', via: [:get]
   match '/business_contact_form', to: 'static_pages#business_contact_form', via: [:get]
+  
+  get 'sign-in', to: redirect("/authors/sign_in")
   
   root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
