@@ -15,7 +15,7 @@
 					<div class="calendar-date-day"><%= post.date.mday %></div>
 				</div>
 				<%= image_tag @author.avatar.url, :class => "post-avatar" %>
-				<h2 class="post-title"><%= post.title.html_safe %></h2>
+				<h2 class="post-title"><%= link_to post.title.html_safe, post %></h2>
 				<p class="post-meta">By <%= @author.first_name %> <%= @author.last_name %></p>
 			</header>
 			<div class="post-description">

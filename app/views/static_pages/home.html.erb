@@ -18,9 +18,10 @@
 						<div class="calendar-date-month"><%= Date::ABBR_MONTHNAMES[post.date.month] %></div>
 						<div class="calendar-date-day"><%= post.date.mday %></div>
 					</div>
-					<%= image_tag @author.avatar.url, :class => "post-avatar" %>
-					<h2 class="post-title"><%= post.title.html_safe %></h2>
-					<p class="post-meta">By <%= @author.first_name %> <%= @author.last_name %></p>
+					<% author_name = @author.first_name + " " + @author.last_name %>
+					<%= link_to image_tag(@author.avatar.url, :alt => author_name, :class => "post-avatar"), @author %>
+					<h2 class="post-title"><%= link_to post.title.html_safe, post %></h2>
+					<p class="post-meta">By <%= link_to author_name, @author %></p>
 				</header>
 				<div class="post-description">
 					<p>

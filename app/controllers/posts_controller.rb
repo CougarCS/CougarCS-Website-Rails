@@ -7,6 +7,9 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
+  
+  def show
+  end
 
   # GET /posts/new
   def new
@@ -20,21 +23,15 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    puts "\n==============\n"
-    puts post_params
-    puts post_params.class.name
-    puts current_author.id
-    puts "\n==============\n"
-    
     @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to root_path, notice: 'Post was successfully created.' }
-        format.json { render action: 'show', status: :created, location: root_path }
+        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @post }
       else
         format.html { render action: 'new' }
-        format.json { render json: root_path.errors, status: :unprocessable_entity }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -44,11 +41,11 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to root_path, notice: 'Post was successfully updated.' }
+        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: root_path.errors, status: :unprocessable_entity }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
