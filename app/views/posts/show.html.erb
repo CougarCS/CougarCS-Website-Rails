@@ -16,7 +16,8 @@
 		
 		
 	<% if author_signed_in? %>
-		<%= link_to 'Edit', edit_post_path(@post) %>
+	<%= link_to 'Edit', edit_post_path(@post), class: "pure-button button-uh" %>
+	<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "pure-button button-uh" %>
 	<% end %>
 
 </div>
