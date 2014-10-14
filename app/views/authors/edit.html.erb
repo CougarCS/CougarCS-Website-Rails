@@ -1,11 +1,16 @@
-<div class="header">
-	<h1>Edit author</h1>
-</div>
+<% if @author == current_author %>
+	<div class="header">
+		<h1>Edit author</h1>
+	</div>
 
-<div class="content">
-	<h2 class="content-subhead"></h2>
-	<%= render 'form' %>
-</div>
-
+	<div class="content">
+		<h2 class="content-subhead"></h2>
+		<%= render 'form' %>
+	</div>
+<% else %>
+	<div class="header">
+		<h1>You can only edit your profile!</h1>
+	</div>
+<% end %>
 <!-- <#= link_to 'Show', @author %> |
 <#= link_to 'Back', authors_path %> -->

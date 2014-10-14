@@ -26,6 +26,8 @@
 		</section>
 	<% end %>
 
-	<%= link_to 'Edit profile', edit_author_path(@author) %>
+	<% if author_signed_in? %>
+		<%= link_to 'Edit profile', edit_author_path(@author), class: "pure-button button-uh" %>
+	<% end %>
 
 </div>
