@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @posts = Post.all
+    @posts = Post.all.order('date desc')
   end
   
   def about
