@@ -10,7 +10,12 @@
 
 	$(document).ready(function() {	
 		$('#calendar').fullCalendar({
-			events: 'http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic'
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			events: 'https://www.google.com/calendar/feeds/cougarcs.com_fkch2j6i7vh6c58pp7n7dhj4e4%40group.calendar.google.com/public/basic'
 		});
 	});
 
