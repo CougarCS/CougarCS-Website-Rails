@@ -8,12 +8,24 @@ CougarCSWebsite::Application.routes.draw do
   get "static_pages/about"
   get "static_pages/contact"
   get "static_pages/officers"
+  get "static_pages/hackathons"
+  get "static_pages/social_events"
+  get "static_pages/calendar"
   get "static_pages/business_contact_form"
+  get "static_pages/sponsors"
+  get "static_pages/become_a_member"
+  get "static_pages/lightning_talks"
   
   match '/about', to: 'static_pages#about', via: [:get]
   match '/contact', to: 'static_pages#contact', via: [:get]
   match '/officers', to: 'static_pages#officers', via: [:get]
+  match '/hackathons', to: 'static_pages#hackathons', via: [:get]
+  match '/social_events', to: 'static_pages#social_events', via: [:get]
+  match '/calendar', to: 'static_pages#calendar', via: [:get]
   match '/business_contact_form', to: 'static_pages#business_contact_form', via: [:get]
+  match '/sponsors', to: 'static_pages#sponsors', via: [:get]
+  match '/become_a_member', to: 'static_pages#become_a_member', via: [:get]
+  match '/lightning_talks', to: 'static_pages#lightning_talks', via: [:get]
   
   get 'sign-in', to: redirect("/authors/sign_in")
   

@@ -12,7 +12,22 @@ class StaticPagesController < ApplicationController
   def officers
   end
   
+  def hackathons
+  end
+  
+  def social_events
+  end
+  
+  def calendar
+  end
+  
   def business_contact_form
+  end
+  
+  def sponsors
+  end
+  
+  def become_a_member
   end
   
 end
