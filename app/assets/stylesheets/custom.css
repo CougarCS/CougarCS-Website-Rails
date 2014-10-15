@@ -45,6 +45,17 @@ hr.style-one {
 
 
 
+.hackathon-date {
+	font-size: 3em;
+	font-weight: 300;
+	color: #888888;
+	text-align: center;
+	line-height: 70px;
+	vertical-align: middle;
+	height: 100%;
+}
+
+
 
 /* Home page splash parallax effect */
 .splash-container {
