@@ -180,6 +180,7 @@ hr.style-one {
     font-size: 2em;
     color: #222;
     margin-bottom: 0.2em;
+	line-height: 40px;
 }
 .post-title a {
 	text-decoration: none;
