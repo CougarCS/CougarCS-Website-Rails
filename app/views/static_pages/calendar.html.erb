@@ -1,8 +1,34 @@
+<head>
+<meta charset='utf-8' />
+<link href='/assets/fullCalendar/fullcalendar.css' rel='stylesheet' />
+<link href='/assets/fullCalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='/assets/fullCalendar/lib/moment.min.js'></script>
+<script src='/assets/fullCalendar/lib/jquery.min.js'></script>
+<script src='/assets/fullCalendar/fullcalendar.min.js'></script>
+<script src='/assets/fullCalendar/gcal.js'></script>
+<script>
+
+	$(document).ready(function() {	
+		$('#calendar').fullCalendar({
+			events: 'http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic'
+		});
+	});
+
+</script>
+<style>
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+
 <div class="header">
 	<h1>Calendar</h1>
 </div>
 
 <div class="content">
 	<h2 class="content-subhead"></h2>
-	
+	<div id='calendar'></div>
 </div>
