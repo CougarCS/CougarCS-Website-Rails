@@ -1,8 +1,8 @@
-<div class="splash-container">
+<div id="divInNeedOfAdjustment" class="splash-container">
 	<img class="pure-img-responsive" src="images/officers_1.jpg" alt="CougarCS Officer Fall 2014">
 </div>
 
-<div class="content-wrapper">
+<div id="theGoodDiv" class="content-wrapper">
 	<div class="header">
 		<h1>Blog</h1>
 	</div>
@@ -11,28 +11,35 @@
 		<h2 class="content-subhead"></h2>
 
 		<% for post in @posts %>
-			<% @author = Author.find(post.author_id) %>
-			<section class="post">
-				<header class="post-header">
-					<div class="calendar-date">
-						<div class="calendar-date-month"><%= Date::ABBR_MONTHNAMES[post.date.month] %></div>
-						<div class="calendar-date-day"><%= post.date.mday %></div>
-					</div>
-					<% author_name = @author.first_name + " " + @author.last_name %>
-					<%= link_to image_tag(@author.avatar.url, :alt => author_name, :class => "post-avatar"), @author %>
-					<h2 class="post-title"><%= link_to post.title.html_safe, post %></h2>
-					<p class="post-meta">By <%= link_to author_name, @author %></p>
-				</header>
-				<div class="post-description">
-					<p>
-						<%= post.body.html_safe %>
-					</p>
+		<% @author = Author.find(post.author_id) %>
+		<section class="post">
+			<header class="post-header">
+				<div class="calendar-date">
+					<div class="calendar-date-month"><%= Date::ABBR_MONTHNAMES[post.date.month] %></div>
+					<div class="calendar-date-day"><%= post.date.mday %></div>
 				</div>
-			</section>
+				<% author_name = @author.first_name + " " + @author.last_name %>
+				<%= link_to image_tag(@author.avatar.url, :alt => author_name, :class => "post-avatar"), @author %>
+				<h2 class="post-title"><%= link_to post.title.html_safe, post %></h2>
+				<p class="post-meta">By <%= link_to author_name, @author %></p>
+			</header>
+			<div class="post-description">
+				<p>
+					<%= post.body.html_safe %>
+				</p>
+			</div>
+		</section>
 		<% end %>
 	
 	</div>
 
 	
 </div>
-</div>
+
+<script>
+setSizes();
+function setSizes(){
+	$("#divInNeedOfAdjustment").width($("#theGoodDiv").width());
+}
+$(window).resize(function() { setSizes(); });
+</script>
