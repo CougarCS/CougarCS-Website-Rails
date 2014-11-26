@@ -19,7 +19,20 @@
 
 		<div id="menu">
 			<div class="pure-menu pure-menu-open">
-				<a class="pure-menu-heading" href="/">CougarCS</a>
+				<a class="pure-menu-heading" href="/">
+					CougarCS
+					<% if request.subdomain == 'members' %>
+					<span class="subdomain-heading">members</span>
+					<% end %>
+					
+					<% if request.subdomain == 'business' %>
+					<span class="subdomain-heading">business</span>
+					<% end %>
+				</a>
+				
+				<% puts "\n\nyo yo\n\n" %>
+				<% puts request %>
+				<% puts request.subdomain %>
 
 				<ul>
 					<!-- class="pure-menu-selected" -->

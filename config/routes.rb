@@ -18,8 +18,8 @@ CougarCSWebsite::Application.routes.draw do
   get 'sign-in', to: redirect("/authors/sign_in")
   
   match '/', to: 'static_pages#home', constraints: { subdomain: 'www' }, via: [:get, :post, :put, :patch, :delete]
-  match '/', to: 'static_pages#hackathons', constraints: { subdomain: 'members' }, via: [:get, :post, :put, :patch, :delete]
-  match '/', to: 'static_pages#contact', constraints: { subdomain: 'business' }, via: [:get, :post, :put, :patch, :delete]
+  # match '/', to: 'static_pages#hackathons', constraints: { subdomain: 'members' }, via: [:get, :post, :put, :patch, :delete]
+  # match '/', to: 'static_pages#contact', constraints: { subdomain: 'business' }, via: [:get, :post, :put, :patch, :delete]
   
   root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
