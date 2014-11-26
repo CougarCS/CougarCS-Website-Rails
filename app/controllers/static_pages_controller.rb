@@ -30,4 +30,7 @@ class StaticPagesController < ApplicationController
   def become_a_member
   end
   
+  def constitution
+  end
+  
 end

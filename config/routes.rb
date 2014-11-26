@@ -14,6 +14,7 @@ CougarCSWebsite::Application.routes.draw do
   match '/sponsors', to: 'static_pages#sponsors', via: [:get]
   match '/become_a_member', to: 'static_pages#become_a_member', via: [:get]
   match '/lightning_talks', to: 'static_pages#lightning_talks', via: [:get]
+  match '/constitution', to: 'static_pages#constitution', via: [:get], constraints: {subdomain: 'members'}
   
   get 'sign-in', to: redirect("/authors/sign_in")
   
