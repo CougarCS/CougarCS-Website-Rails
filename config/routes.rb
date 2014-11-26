@@ -17,14 +17,6 @@ CougarCSWebsite::Application.routes.draw do
   
   get 'sign-in', to: redirect("/authors/sign_in")
   
-  # match '/' => 'static_pages#hackathons', :constraints => { :subdomain => /.+/ }
-  # match 'gallery_:id' => 'gallery#show', :via => [:get], :as => 'gallery_show'
-  # match '/' => 'static_pages#hackathons', :via => [:get], :constraints => { :subdomain => /.+/ }
-  
-  # constraints(Subdomain) do
-  #   match '/' => Subdomain.home_page_for_subdomain, :via => [:get]
-  # end
-  
   match '/', to: 'static_pages#home', constraints: { subdomain: 'www' }, via: [:get, :post, :put, :patch, :delete]
   match '/', to: 'static_pages#hackathons', constraints: { subdomain: 'members' }, via: [:get, :post, :put, :patch, :delete]
   match '/', to: 'static_pages#contact', constraints: { subdomain: 'business' }, via: [:get, :post, :put, :patch, :delete]
