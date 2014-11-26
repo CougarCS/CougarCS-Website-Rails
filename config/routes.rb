@@ -3,18 +3,6 @@ CougarCSWebsite::Application.routes.draw do
   resources :authors, :except => [:index]
   
   resources :posts, :except => [:index]
-
-  get "static_pages/home"
-  get "static_pages/about"
-  get "static_pages/contact"
-  get "static_pages/officers"
-  get "static_pages/hackathons"
-  get "static_pages/social_events"
-  get "static_pages/calendar"
-  get "static_pages/business_contact_form"
-  get "static_pages/sponsors"
-  get "static_pages/become_a_member"
-  get "static_pages/lightning_talks"
   
   match '/about', to: 'static_pages#about', via: [:get]
   match '/contact', to: 'static_pages#contact', via: [:get]
