@@ -5,16 +5,22 @@ CougarCSWebsite::Application.routes.draw do
   resources :posts, :except => [:index]
   
   match '/about', to: 'static_pages#about', via: [:get]
-  match '/contact', to: 'static_pages#contact', via: [:get]
-  match '/officers', to: 'static_pages#officers', via: [:get]
-  match '/hackathons', to: 'static_pages#hackathons', via: [:get]
-  match '/social_events', to: 'static_pages#social_events', via: [:get]
-  match '/calendar', to: 'static_pages#calendar', via: [:get]
-  match '/business_contact_form', to: 'static_pages#business_contact_form', via: [:get]
-  match '/sponsors', to: 'static_pages#sponsors', via: [:get]
   match '/become_a_member', to: 'static_pages#become_a_member', via: [:get]
+  match '/business_contact_form', to: 'static_pages#business_contact_form', via: [:get]
+  match '/calendar', to: 'static_pages#calendar', via: [:get]
+  match '/career_fair_info_businesses', to: 'static_pages#career_fair_info_businesses', via: [:get]
+  match '/companies_list', to: 'static_pages#companies_list', via: [:get]
+  match '/constitution', to: 'static_pages#constitution', via: [:get]
+  match '/contact', to: 'static_pages#contact', via: [:get]
+  match '/event_pictures', to: 'static_pages#event_pictures', via: [:get]
+  match '/hackathons', to: 'static_pages#hackathons', via: [:get]
   match '/lightning_talks', to: 'static_pages#lightning_talks', via: [:get]
-  match '/constitution', to: 'static_pages#constitution', via: [:get], constraints: {subdomain: 'members'}
+  match '/officers_application', to: 'static_pages#officers_application', via: [:get]
+  match '/officers', to: 'static_pages#officers', via: [:get]
+  match '/social_events', to: 'static_pages#social_events', via: [:get]
+  match '/sponsors', to: 'static_pages#sponsors', via: [:get]
+  match '/tutoring', to: 'static_pages#tutoring', via: [:get]
+  
   
   get 'sign-in', to: redirect("/authors/sign_in")
   
