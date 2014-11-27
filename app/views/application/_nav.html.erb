@@ -1,0 +1,14 @@
+<%= nav_link_to 'Home', "/", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'About', "/about", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'Contact us', "/contact", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'Officers', "/officers", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'Constitution', "/constitution", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} if request.subdomain == 'members' %>
+<%= nav_link_to 'Hackathons', "/hackathons", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'Social events', "/social_events", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'Calendar', "/calendar", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'Business contact form', "/business_contact_form", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'CougarCS sponsors', "/sponsors", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'Become a member', "/become_a_member", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'Members showcase', "#", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'Lightning talks', "/lightning_talks", {}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
+<%= nav_link_to 'UH CS news', "http://www.cs.uh.edu/news-events/index.php", {:target => '_blank'}, {:selected_class => 'pure-menu-selected', :wrapper => 'li'} %>
